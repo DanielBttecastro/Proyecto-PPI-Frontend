@@ -1,0 +1,66 @@
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+ 
+details[open] summary {
+    background: rgb(105, 105, 105);
+    color: white;
+    
+}
+
+details[open] summary::after {
+    content: '';
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="white" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" /></svg>');
+    width: 24px; /* Ancho del SVG */
+    height: 24px; /* Altura del SVG */
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+summary::after {
+    content: '';
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="RGB(75, 85, 99)" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" /></svg>');
+    width: 24px; /* Ancho del SVG */
+    height: 24px; /* Altura del SVG */
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+details[open] summary ~ * {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+details[open] summary p {
+    opacity: 0;
+    animation-name: showContent;
+    animation-duration: 0.6s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    margin: 0;
+}
+
+@keyframes showContent {
+    from {
+    opacity: 0;
+    height: 0;
+    }
+    to {
+    opacity: 1;
+    height: auto;
+    }
+}
+@keyframes slideDown {
+    from {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    }
+
+    to {
+    opacity: 1;
+    height: auto;
+    }
+}

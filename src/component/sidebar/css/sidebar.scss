@@ -1,0 +1,68 @@
+
+$primary: #046132;
+$secondary: #f4cc11;
+$success: #5cb85c;
+
+#iconAcorSlidebar {
+    cursor: pointer;
+}
+
+ 
+#slidebar {
+    z-index: 2;
+    &.ocultar {
+        display: none;
+    }
+
+    &.mostrar {
+        display: inline;
+    }
+}
+
+#contSlidebar {
+    
+    z-index: 2;
+    margin-left: 258px;
+    &.inactive {
+        background-color: rgba(3, 3, 3, 0.69);
+    }
+}
+.selected {
+    background-color: #4CAF50; /* Color de fondo cuando está seleccionado */
+    color: white; /* Color de texto cuando está seleccionado */
+}
+#AcorSlidebar {
+    position: fixed;
+    z-index: 2;
+
+    &.ocultar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #slidebar {
+        display: none;
+    }
+    #AcorSlidebar {
+        display: inline;
+    }
+    
+    #contSlidebar {
+        margin-left: 0px;
+        margin-top: 64px;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    #slidebar {
+        display: inline;
+    }
+    #AcorSlidebar {
+        display: none;
+    }
+    #contSlidebar {
+        margin-left: 258px;
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,16 @@
+/* Estilos para hacer la tabla responsive en dispositivos móviles */
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+/* Estilos para ajustar la tabla en dispositivos móviles */
+@media (max-width: 768px) {
+    .min-w-full {
+        overflow-x: auto;
+        width: 100%;
+    }
+}
+
+.cursor-not-allowed {
+    cursor: not-allowed;
+}

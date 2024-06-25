@@ -1,0 +1,11 @@
+.table-wrapper {
+    overflow-x: hidden;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+/* Agrega esto en tu archivo CSS */
+
+

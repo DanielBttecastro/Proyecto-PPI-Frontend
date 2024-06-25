@@ -1,0 +1,178 @@
+.calificacion-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Alinea verticalmente */
+}
+
+.nota-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Alinea verticalmente */
+}
+
+
+/* Estilo para el estado "A Tiempo" */
+.status-green {
+    color: #5cb85c;
+    /* Color del texto */
+    background-color: #e7f3eb;
+    /* Color de fondo */
+    padding: 4px 8px;
+    /* Espaciado interno */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+/* Estilo para el estado "Plazo Vencido" */
+.status-red {
+    color: #d9534f;
+    /* Color del texto */
+    background-color: #f9eaea;
+    /* Color de fondo */
+    padding: 4px 8px;
+    /* Espaciado interno */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+/* Estilo para el estado "Entregado" */
+.status-blue {
+    color: #007bff;
+    /* Color del texto */
+    /* Color de fondo */
+    padding: 4px 8px;
+    /* Espaciado interno */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+/* Estilo para los elementos de la tabla */
+table {
+    border-collapse: collapse;
+    /* Fusionar los bordes de las celdas */
+    width: 100%;
+    /* Ancho de la tabla */
+}
+
+td,
+th {
+    padding: 10px;
+    /* Espaciado interno */
+}
+
+th {
+    background-color: #013a06;
+    /* Color de fondo de las celdas de encabezado */
+    color: white;
+}
+
+/* Estilo para las filas pares */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Color de fondo de las filas pares */
+}
+
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* Color de fondo de las filas impares */
+}
+
+/* Estilo para el botón de carga */
+.upload-button {
+    background-color: #22c55e;
+    /* Color de fondo */
+    color: #fff;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    padding: 8px 16px;
+    /* Espaciado interno */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s;
+    /* Transición suave del color de fondo */
+}
+
+.upload-button:hover {
+    background-color: #15803d;
+    /* Cambiar color de fondo al pasar por encima */
+}
+
+.calificacion-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Para centrar horizontalmente */
+}
+
+/* Add this to your Page.css file */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.calificacion-header, .calificacion-container, .nota-container {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    td:before {
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        transform: translateY(-50%);
+        text-align: left;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1):before { content: "Nombre"; }
+    td:nth-of-type(2):before { content: "Porcentaje"; }
+    td:nth-of-type(3):before { content: "Calificación"; }
+}

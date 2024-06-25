@@ -1,0 +1,76 @@
+#iconAcorSlidebar {
+    cursor: pointer
+}
+
+#slidebar {
+    z-index: 2
+}
+
+#slidebar.ocultar {
+    display: none
+}
+
+#slidebar.mostrar {
+    display: inline
+}
+
+#contSlidebar {
+    z-index: 2;
+    margin-left: 258px
+}
+
+#contSlidebar.inactive {
+    background-color: rgba(3, 3, 3, .69)
+}
+
+.selected {
+    background-color: #4caf50;
+    color: #fff
+}
+
+#AcorSlidebar {
+    position: fixed;
+    z-index: 2
+}
+
+#AcorSlidebar.ocultar {
+    display: none
+}
+
+@media only screen and (max-width: 767px) {
+    #slidebar {
+        display: none
+    }
+
+    #AcorSlidebar {
+        display: inline
+    }
+
+    #contSlidebar {
+        margin-left: 0px;
+        margin-top: 64px
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    #slidebar {
+        display: inline
+    }
+
+    #AcorSlidebar {
+        display: none
+    }
+
+    #contSlidebar {
+        margin-left: 258px;
+        margin-top: 0px
+    }
+
+    .hide-on-desktop {
+        display: none;
+    }
+}
